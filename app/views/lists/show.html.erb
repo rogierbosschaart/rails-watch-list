@@ -14,7 +14,7 @@
       <div class="d-flex">
         <% @bookmarks.each do |bookmark| %>
           <div class="card mx-3">
-            <%= image_tag "#{bookmark.movie.poster_url}", alt: "#{bookmark.movie.title}", class:"img-fluid. max-width: 100%; and height: auto;" %>
+            <%= image_tag "#{bookmark.movie.poster_url}", alt: "#{bookmark.movie.title}", class:"img-fluid. max-width: 100%; and height: auto;", crop: :fill %>
             <div class="card-header">
               <h2> <strong><%= bookmark.movie.title %></strong> <%= bookmark.movie.rating %></h2>
             </div>
