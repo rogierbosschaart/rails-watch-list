@@ -1,6 +1,7 @@
 .bookmark-card {
   width: 400px;
-  border: 0.5px solid rgba(240,240,240,0.5);
+  background-color: white;
+  border: 0.5px solid rgba(240,240,240,0.8);
   border-radius: 5px;
   box-shadow: 2px 2px 4px rgba(0,0,0,0.1);
 
@@ -13,16 +14,21 @@
     border-top-right-radius: 5px;
   }
 
-  h2, p {
+  .card-text {
+    padding: 10px;
+
+    h2 {
+    font-weight: 600;
     font-size: 16px;
+    }
   }
+
 
   .delete-link {
     text-decoration: none;
     color: rgb(183, 5, 5);
     font-weight: 600;
     float: right;
-    padding: 5px;
   }
 }
 
@@ -39,5 +45,3 @@
     text-align: center;
   }
 }
-
-
