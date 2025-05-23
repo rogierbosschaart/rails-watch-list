@@ -1,7 +1,19 @@
 .card {
   width: 300px;
+  border: 0.5px solid rgba(240,240,240,0.5);
+  border-radius: 5px;
   box-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+
+  img {
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+  }
   h2, p {
     font-size: 16px;
+  }
+
+  .delete-link {
+    float: right;
+    padding: 5px;
   }
 }

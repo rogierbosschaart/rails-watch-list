@@ -22,7 +22,7 @@
               <p><%= bookmark.comment %></p>
             </div>
             <div>
-              <%= link_to "Delete", bookmark_path(bookmark), data: { turbo_method: :delete, turbo_confirm: "Are you sure " } %>
+              <%= link_to "Delete", bookmark_path(bookmark), data: { turbo_method: :delete, turbo_confirm: "Are you sure" }, class:"delete-link" %>
             </div>
           </div>
         <% end %>
