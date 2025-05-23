@@ -10,20 +10,25 @@
 
 <div class="container my-3">
   <div class="row">
-    <div class="col-6">
-      <div class="d-flex">
+    <div class="col-12">
+      <div class="d-flex flex-wrap">
         <% @bookmarks.each do |bookmark| %>
-          <div class="card mx-3">
+          <div class="bookmark-card m-3">
+
             <%= image_tag "#{bookmark.movie.poster_url}", alt: "#{bookmark.movie.title}", class:"img-fluid. max-width: 100%; and height: auto;", crop: :fill %>
+
             <div class="card-header">
               <h2> <strong><%= bookmark.movie.title %></strong> <%= bookmark.movie.rating %></h2>
             </div>
+
             <div class="card-body">
               <p><%= bookmark.movie.overview %></p>
             </div>
+
             <div>
-              <%= link_to "Delete", bookmark_path(bookmark), data: { turbo_method: :delete, turbo_confirm: "Are you sure" }, class:"delete-link" %>
+              <%= link_to "delete", bookmark_path(bookmark), data: { turbo_method: :delete, turbo_confirm: "Are you sure" }, class:"delete-link" %>
             </div>
+
           </div>
         <% end %>
       </div>

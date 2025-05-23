@@ -1,9 +1,23 @@
-<h1>Hello!</h1>
+<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fbatterseapowerstation.co.uk%2Fcontent%2Fuploads%2F2022%2F08%2FCinema-in-the-Power-Station-image001hero-1600x869.jpg&f=1&nofb=1&ipt=314486976e606edb0229c8f33011a9186e16e33775be0637ee3714dc07d3b039);">
+  <div class="container">
+    <h1> <%= "MOVIES WATCHLISTS" %> </h1>
+  </div>
+</div>
 
-<ul>
-  <% @lists.each do |list| %>
-    <li> <%= link_to list.name, list_path(list) %> </li>
-  <% end %>
-</ul>
+<div class="container my-3">
+  <div class="row">
+    <div class="col-12">
+      <div class="d-flex flex-wrap">
+          <% @lists.each do |list| %>
+            <%= link_to(list_path(list)) do %>
+              <div class="list-card m-3">
+                <h2> <%= list.name %> </h2>
+              </div>
+            <% end %>
+          <% end %>
+      </div>
+    </div>
+  </div>
+</div>
 
 <%= link_to "Add new list", new_list_path %>
