@@ -9,7 +9,7 @@
 <div class="container my-3">
 
   <div class="d-flex justify-content-end px-4 py-2">
-    <%= link_to "Add movies",  new_list_bookmark_path(@list), class:"btn btn-outline-success" %>
+    <%# <%= link_to "Add movies",  new_list_bookmark_path(@list), class:"btn btn-outline-success" %> %>
   </div>
 
   <div class="row">
@@ -41,6 +41,16 @@
           </div>
         <% end %>
       </div>
+
+      <hr>
+
+      <h1>Add movies</h1>
+
+      <%= simple_form_for [@list, @bookmark] do |f| %>
+        <%= f.association :movie %>
+        <%= f.input :comment %>
+        <%= f.submit "Add bookmark", class:"btn btn-outline-success" %>
+      <% end %>
 
       <hr>
 
