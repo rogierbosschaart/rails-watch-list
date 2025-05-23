@@ -19,7 +19,7 @@
               <h2> <strong><%= bookmark.movie.title %></strong> <%= bookmark.movie.rating %></h2>
             </div>
             <div class="card-body">
-              <p><%= bookmark.comment %></p>
+              <p><%= bookmark.movie.overview %></p>
             </div>
             <div>
               <%= link_to "Delete", bookmark_path(bookmark), data: { turbo_method: :delete, turbo_confirm: "Are you sure" }, class:"delete-link" %>
